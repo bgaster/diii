@@ -28,9 +28,14 @@ from prompt_toolkit.widgets import TextArea
 from prompt_toolkit.layout.controls import FormattedTextControl
 from prompt_toolkit.layout.menus import CompletionsMenu
 
-from diii.iii import Deviceiii
+from diii.iii import Deviceiii as ODeviceiii
+from diii.viii import Deviceviii
 from diii.server import DiiiServer
 
+# Deviceiii = ODeviceiii
+Deviceiii = Deviceviii
+# if True:
+    
 
 logger = logging.getLogger(__name__)
 
@@ -195,6 +200,7 @@ class DiiiRepl(UiPage):
         on_disconnect = lambda exc: self.output('  <device disconnected>\n')
         self.handlers = {
             'connect': [lambda: self.output('  <device connected>\n')],
+            'connect_etc': [lambda: self.output('  <etc connected>\n')],
             'connect_err': [on_disconnect],
             'disconnect': [on_disconnect],
 

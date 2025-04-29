@@ -1,5 +1,14 @@
 # diii
 
+This is a fork of [diii](https://github.com/monome/diii).
+
+Why do I need a fork? I want to be able to develop monome Lua devices 
+in software, before moving them to hardware. In particular,
+I have a Max/MSP extenral that is an iii device, that connects 
+to the Max world for its UI and MIDI, which makes prototyping 
+easier.
+
+
 A basic REPL for iii devices
 
 A fork of [druid](https://github.com/monome/druid) (which is for [crow](https://github.com/monome/crow))
